@@ -3,7 +3,6 @@ import { GlobalState, Action } from '../types/index'
 export const initialState: GlobalState = {
     user: null,
     projects: [],
-    selectedProject: null,
 }
 
 export const globalReducer = (state: GlobalState, action: Action): GlobalState => {
@@ -12,8 +11,6 @@ export const globalReducer = (state: GlobalState, action: Action): GlobalState =
             return { ...state, user: action.payload }
         case 'SET_PROJECTS':
             return { ...state, projects: action.payload }
-        case 'SELECT_PROJECT':
-            return { ...state, selectedProject: action.payload }
         default:
             return state
     }

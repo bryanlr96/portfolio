@@ -42,10 +42,8 @@ export type Project = {
 export type GlobalState = {
     user: Contact | null
     projects: Project[]
-    selectedProject: Project | null
 }
 
 export type Action =
     | { type: 'SET_USER'; payload: Contact }
     | { type: 'SET_PROJECTS'; payload: Project[] }
-    | { type: 'SELECT_PROJECT'; payload: Project }

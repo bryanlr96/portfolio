@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import useGlobal from "../hooks/useGlobal"
 import { getProjectBySlug } from "../utils/sanityData"
+import Header from "../components/Header"
 
 
 export default function ProjectDetail() {
@@ -9,9 +10,11 @@ export default function ProjectDetail() {
 
     const project = getProjectBySlug(state.projects, slug || '')
 
-
-    if(!project) return <h1>Projecto no encontrado</h1>
+    if (!project) return <h1>Projecto no encontrado</h1>
     return (
-        <h1>{project.name}</h1>
+        <>
+            <Header/>
+            <h1>{project.name}</h1>
+        </>
     )
 }

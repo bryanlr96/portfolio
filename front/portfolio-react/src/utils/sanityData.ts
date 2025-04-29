@@ -39,6 +39,6 @@ export const fetchProjects = async () => {
 
 // Filtra los proyectos por el slug
 export const getProjectBySlug = (projects: Project[], slug: string): Project | null => {
-  const project = projects.find(project => project.slug?.current === slug)
+  const project = projects.find(project => project.slug?.current === '/'+slug)
   return project ?? null
 }
