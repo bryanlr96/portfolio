@@ -1,3 +1,4 @@
+import { Project } from '../types'
 import { client } from './sanityClient'
 
 // Obtener un solo contacto
@@ -14,7 +15,17 @@ export const fetchContact = async () => {
 
 // Obtener proyectos
 export const fetchProjects = async () => {
-  const query = `*[_type == "project"] {_id, name, description, link, image}`
+  const query = `*[_type == "project"] {_id, id, name, description, slug, github, link,
+    technologies[]->{
+      _id,
+      name
+    },
+    image{
+      asset->{
+        url
+      }
+    }
+  }`
 
   try {
     return await client.fetch(query)
@@ -23,4 +34,11 @@ export const fetchProjects = async () => {
     console.error("Error fetching projects:", error)
     return []
   }
+}
+
+
+// Filtra los proyectos por el slug
+export const getProjectBySlug = (projects: Project[], slug: string): Project | null => {
+  const project = projects.find(project => project.slug?.current === slug)
+  return project ?? null
 }

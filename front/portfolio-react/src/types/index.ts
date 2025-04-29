@@ -18,16 +18,26 @@ export type Contact = {
 
 export type Project = {
     _id: string
-    title: string
+    id: number
+    name: string
     description: string
-    image?: {
-        asset: {
-            _ref: string
-            _type: string
-            url?: string
-        }
+    slug: {
+      current: string
     }
-}
+    github: string
+    link: string
+    technologies: {
+      _ref: string
+      _type: 'reference'
+    }[]
+    image: {
+      asset: {
+        _ref: string
+        _type: 'reference'
+      }
+    }
+  }
+  
 
 export type GlobalState = {
     user: Contact | null
