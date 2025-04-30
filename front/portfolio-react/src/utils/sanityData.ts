@@ -3,7 +3,7 @@ import { client } from './sanityClient'
 
 // Obtener un solo contacto
 export const fetchContact = async () => {
-  const query = `*[_type == "contact"][0] {_id, name, title, description, phone, email, linkedin, github, image}`
+  const query = `*[_type == "contact"][0] {_id, name, title, description, phone, email, linkedin, github, image, banner}`
   
   try {
     return await client.fetch(query)

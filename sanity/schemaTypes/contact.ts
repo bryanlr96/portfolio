@@ -50,6 +50,11 @@ export default {
           hotspot: true, // Activa la opción de hotspot para hacer recortes precisos
         },
       },
+      {
+        name: 'banner',
+        title: 'Banner',
+        type: 'image', // Imagen del Banner
+      },
     ],
     preview:{
       select:{

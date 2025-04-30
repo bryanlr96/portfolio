@@ -13,6 +13,13 @@ export type Contact = {
             _type: string
             url?: string
         }
+    },
+    banner: {
+        asset: {
+            _ref: string
+            _type: string
+            url?: string
+        }
     }
 }
 
