@@ -1,7 +1,7 @@
 import { createContext, useReducer, ReactNode, Dispatch, useEffect } from 'react'
 import { globalReducer, initialState } from '../reducers/globalReducer'
 import { GlobalState, Action } from '../types'
-import { fetchContact, fetchProjects } from '../utils/sanityData'
+import { fetchContact, fetchProjects, fetchTechnologies } from '../utils/sanityData'
 
 type GlobalContextType = {
     state: GlobalState
@@ -19,10 +19,12 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
                 // Pedimos la info a sanity
                 const contact = await fetchContact()
                 const projects = await fetchProjects()
-                
+                const technologies = await fetchTechnologies()
+
                 // Si hay info la cargamos en el context
                 if(contact) dispatch({type: 'SET_USER', payload: contact})
                 if(projects.length > 0) dispatch({type: 'SET_PROJECTS', payload: projects})
+                if(technologies.length > 0) dispatch({type: 'SET-TECHNOLOGIES', payload: technologies})
             }catch (error){
                 console.error('Error al cargar los datos: ', error)
             }

@@ -18,12 +18,6 @@ export default {
           hotspot: true,
         },
       },
-      {
-        name: 'color',
-        title: 'Technology Color',
-        type: 'string', // Color asociado a la tecnología (en formato hexadecimal o color CSS)
-        description: 'Color to represent the technology',
-      },
     ],
     preview:{
       select:{
