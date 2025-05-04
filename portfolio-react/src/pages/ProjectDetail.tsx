@@ -9,10 +9,6 @@ import { FaGithub, FaLink } from 'react-icons/fa'
 export default function ProjectDetail() {
     const { slug } = useParams()
     const { state } = useGlobal()
-
-    console.log(slug)
-    const prueba = state.projects.find(project => project.slug?.current === '/' + slug)
-    console.log(prueba)
     
     const project = getProjectBySlug(state.projects, slug || '')
     const { technologies } = state
