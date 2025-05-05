@@ -4,7 +4,7 @@ import { getProjectBySlug, getTechById } from "../utils/sanityData"
 import HeaderDetail from "../components/HeaderDetail"
 import Footer from "../components/Footer"
 import { urlFor } from "../utils/sanityClient"
-import { FaGithub, FaLink } from 'react-icons/fa'
+import { FaGithub, FaLink } from 'react-icons/fa' 
 
 export default function ProjectDetail() {
     const { slug } = useParams()
