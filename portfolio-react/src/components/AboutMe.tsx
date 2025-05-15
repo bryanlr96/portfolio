@@ -13,7 +13,7 @@ export default function AboutMe() {
       }}
       id="about"
     >
-      <div className="w-full h-full bg-black/85">
+      <div className="w-full min-h-[70vh] bg-black/85">
         <div className="w-[80%] h-full mx-auto flex flex-col lg:flex-row items-center text-white justify-center gap-10 lg:justify-between">
           {user && (
             <>
