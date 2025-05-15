@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Header />
       <AboutMe />
-      <main className="w-full h-[100vh] bg-[#303841] flex flex-col items-center">
+      <main className="w-full min-h-[100vh] bg-[#303841] flex flex-col items-center">
         <h2 className="text-white text-4xl uppercase my-[10vh]">Proyectos</h2>
         <ProjectsDisplay />
       </main>
