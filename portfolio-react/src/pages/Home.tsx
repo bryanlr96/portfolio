@@ -8,8 +8,8 @@ import { FaBars } from "react-icons/fa";
 export default function Home() {
   return (
     <>
-      <button className=" md:hidden absolute top-6 right-6 bg-blue-500">
-        <FaBars/>
+      <button className="md:hidden absolute top-6 right-6 bg-blue-500 p-4 rounded">
+        <FaBars className="text-white" />
       </button>
       <Header />
       <AboutMe />
@@ -17,8 +17,8 @@ export default function Home() {
         <h2 className="text-white text-4xl uppercase mb-[10vh]">Proyectos</h2>
         <ProjectsDisplay />
       </main>
-      <Contact/>
-      <Footer/>
+      <Contact />
+      <Footer />
     </>
   )
 }
