@@ -7,7 +7,7 @@ export default function AboutMe() {
 
   return (
     <section
-      className="w-full h-[70vh] bg-cover bg-center scroll-mt-30"
+      className="w-full min-h-[70vh] bg-cover bg-center scroll-mt-30"
       style={{
         backgroundImage: user?.banner ? `url(${urlFor(user.banner).url()})` : "none",
       }}
