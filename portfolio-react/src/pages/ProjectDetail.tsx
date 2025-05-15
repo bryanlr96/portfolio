@@ -18,9 +18,9 @@ export default function ProjectDetail() {
             <HeaderDetail />
             <main className="bg-[#303841]  w-full min-h-[80vh]">
                 <section className="w-[80%] mx-auto flex flex-col items-center text-white">
-                    <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-[50%] my-20" />
+                    <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%]  my-20" />
                     <h1 className="text-4xl uppercase underline">{project.name}</h1>
-                    <div className="w-1/2 my-10 gap-5 flex flex-col">
+                    <div className="w-full sm:w-[90%] md:w-[80%] lg:w-1/2 my-10 gap-5 flex flex-col">
                         {/* <p>{project.description}</p> */}
                         <div>
                             {project.description.split('\n').map((line, idx) =>
@@ -28,7 +28,7 @@ export default function ProjectDetail() {
                             )}
                         </div>
                         <h2>Tecnologias utilizadas:</h2>
-                        <div className="w-full flex flex-wrap gap-5">
+                        <div className="w-full flex flex-wrap gap-3 justify-center sm:justify-start">
                             {project.technologies.map(technology => {
                                 const tech = getTechById(technologies, technology._id)
                                 return (
@@ -40,13 +40,13 @@ export default function ProjectDetail() {
                             })}
                         </div>
                         <h2>Enlaces de interes:</h2>
-                        <div className="w-full flex items-center gap-2">
-                            <a href={project.github} className="py-2 w-[50%] bg-white text-black border-2 border-black font-bold flex items-center">
-                                <FaGithub className="mx-5" />
+                        <div className="w-full flex flex-col sm:flex-row gap-3">
+                            <a href={project.github} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
+                                <FaGithub className="mx-2" />
                                 GitHub
                             </a>
-                            <a href={project.link} className="py-2 w-[50%] bg-white text-black border-2 border-black font-bold flex items-center">
-                                <FaLink className="mx-5" />
+                            <a href={project.link} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
+                                <FaLink className="mx-2" />
                                 Projecto
                             </a>
                         </div>
