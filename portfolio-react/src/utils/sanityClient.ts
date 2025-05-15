@@ -6,6 +6,7 @@ export const client = createClient({
   dataset: 'production',
   apiVersion: '2025-04-30',
   useCdn: true,
+  token: import.meta.env.VITE_SANITY_ACCESS_TOKEN,
 })
 
 // Construye URLs de imagen
