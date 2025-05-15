@@ -20,7 +20,7 @@ export default function Contact() {
                     </a>
                 </li>
                 <li className="flex items-center ">
-                    <a href={user.user?.linkedin} className="text-blue-500 hover:text-blue-700 items-center hidden md:flex">
+                    <a href={user.user?.linkedin} className="text-blue-500 hover:text-blue-700 items-center hidden md:flex truncate">
                         <FaLinkedin className="mr-2" /> {user.user?.linkedin}
                     </a>
                     <a href={user.user?.linkedin} className="text-blue-500 hover:text-blue-700  items-center flex md:hidden">
