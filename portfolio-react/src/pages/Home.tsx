@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <AboutMe />
       <main className="w-full min-h-[100vh] bg-[#303841] flex flex-col items-center py-[10vh]">
-        <h2 className="text-white text-4xl uppercase">Proyectos</h2>
+        <h2 className="text-white text-4xl uppercase mb-[10vh]">Proyectos</h2>
         <ProjectsDisplay />
       </main>
       <Contact/>
