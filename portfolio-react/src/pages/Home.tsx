@@ -8,7 +8,7 @@ import { FaBars } from "react-icons/fa";
 export default function Home() {
   return (
     <>
-      <button className="md:hidden sticky top-6 right-6 bg-blue-500 p-4 rounded cursor-pointer">
+      <button className="md:hidden fixed top-6 right-6 bg-blue-500 p-4 rounded cursor-pointer">
         <FaBars className="text-white" />
       </button>
       <Header />
