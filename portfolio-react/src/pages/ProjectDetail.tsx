@@ -20,8 +20,8 @@ export default function ProjectDetail() {
                 <h1 className="text-4xl uppercase font-bold text-center text-white py-10">{project.name}</h1>
                 <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 text-white gap-10">
                     <div className=" w-full flex flex-col">
-                        <div className="w-full flex">
-                            <button className=" bottom-5 right-5 p-10 bg-blue-500 text-white">+</button>
+                        <div className="w-full relative">
+                            <button className="absolute bottom-5 right-5 p-4 bg-blue-500 text-white text-2xl rounded-full shadow-lg hover:bg-blue-600 transition">+</button>
                             <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
                         </div>
                         <h2 className="my-5">Tecnologias utilizadas:</h2>
