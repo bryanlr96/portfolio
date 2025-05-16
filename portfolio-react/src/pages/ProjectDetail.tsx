@@ -17,7 +17,7 @@ export default function ProjectDetail() {
         <>
             <HeaderDetail />
             <main className="bg-[#303841]  w-full min-h-[80vh]">
-                <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center text-white">
+                <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center text-white gap-5">
                     <div className=" w-full flex flex-col my-10 md:my-20">
                         <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
                         <h2 className="my-5">Tecnologias utilizadas:</h2>
@@ -33,7 +33,7 @@ export default function ProjectDetail() {
                             })}
                         </div>
                     </div>
-                    <div className="w-full flex flex-col">
+                    <div className="w-full flex flex-col md:my-10">
                         <h1 className="text-4xl uppercase font-bold">{project.name}</h1>
                         <div className="w-full my-10 gap-5 flex flex-col">
                             {/* <p>{project.description}</p> */}
