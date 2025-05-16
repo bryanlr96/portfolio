@@ -17,8 +17,9 @@ export default function ProjectDetail() {
         <>
             <HeaderDetail />
             <main className="bg-[#303841]  w-full min-h-[80vh]">
+                <h1 className="text-4xl uppercase font-bold text-center py-10">{project.name}</h1>
                 <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center text-white gap-10">
-                    <div className=" w-full flex flex-col my-10">
+                    <div className=" w-full flex flex-col">
                         <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
                         <h2 className="my-5">Tecnologias utilizadas:</h2>
                         <div className="w-full flex flex-wrap gap-3 justify-center sm:justify-start">
@@ -33,8 +34,7 @@ export default function ProjectDetail() {
                             })}
                         </div>
                     </div>
-                    <div className="w-full flex flex-col md:my-10">
-                        <h1 className="text-4xl uppercase font-bold">{project.name}</h1>
+                    <div className="w-full flex flex-col">
                         <div className="w-full my-10 gap-5 flex flex-col">
                             {/* <p>{project.description}</p> */}
                             <div>
