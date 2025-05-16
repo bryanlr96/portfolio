@@ -4,12 +4,12 @@ import { getProjectBySlug, getTechById } from "../utils/sanityData"
 import HeaderDetail from "../components/HeaderDetail"
 import Footer from "../components/Footer"
 import { urlFor } from "../utils/sanityClient"
-import { FaGithub, FaLink } from 'react-icons/fa' 
+import { FaGithub, FaLink } from 'react-icons/fa'
 
 export default function ProjectDetail() {
     const { slug } = useParams()
     const { state } = useGlobal()
-    
+
     const project = getProjectBySlug(state.projects, slug || '')
     const { technologies } = state
     if (!project) return <h1>Projecto no encontrado</h1>
@@ -18,7 +18,21 @@ export default function ProjectDetail() {
             <HeaderDetail />
             <main className="bg-[#303841]  w-full min-h-[80vh]">
                 <section className="w-[80%] mx-auto flex flex-col items-center text-white">
-                    <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%]  my-20" />
+                    <div className=" w-full flex flex-col">
+                        <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%]  my-20" />
+                        <h2>Tecnologias utilizadas:</h2>
+                        <div className="w-full flex flex-wrap gap-3 justify-center sm:justify-start">
+                            {project.technologies.map(technology => {
+                                const tech = getTechById(technologies, technology._id)
+                                return (
+                                    <div key={technology._id} className=" flex gap-2 items-center justify-center bg-white py-1 px-4 rounded-full">
+                                        <img src={urlFor(tech?.icon).url()} alt="icono" width={25} />
+                                        <p className="text-xl text-black">{tech?.title}</p>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
                     <h1 className="text-4xl uppercase font-bold">{project.name}</h1>
                     <div className="w-full sm:w-[90%] md:w-[80%] lg:w-1/2 my-10 gap-5 flex flex-col">
                         {/* <p>{project.description}</p> */}
