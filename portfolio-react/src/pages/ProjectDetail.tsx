@@ -22,7 +22,7 @@ export default function ProjectDetail() {
                 <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 text-white gap-10">
                     <div className=" w-full flex flex-col">
                         <div className="w-full relative">
-                            <button className="absolute bottom-5 right-5  bg-blue-500 text-white text-2xl rounded-full shadow-lg hover:bg-blue-600 transition h-10 w-10 flex items-center justify-center"><HiOutlineCursorClick className="text-2xl"/></button>
+                            <button className="absolute bottom-5 right-5  bg-blue-500 text-white text-2xl rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition h-10 w-10 flex items-center justify-center"><HiOutlineCursorClick className="text-2xl"/></button>
                             <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
                         </div>
                         <h2 className="my-5">Tecnologias utilizadas:</h2>
