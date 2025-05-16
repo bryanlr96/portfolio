@@ -13,14 +13,14 @@ export default function HeaderMobile({ headerMobileVisible, setHeaderMobileVisib
             onClick={() => setHeaderMobileVisible(false)}
         >
             <ul className="w-full bg-blue-500 text-white">
-                <li className="h-[55px] border-b border-white flex items-center uppercase w-full" onClick={() => setHeaderMobileVisible(false)}>
-                    <a href="#about" className="text-center hover:underline w-full">sobre mí</a>
+                <li className="h-[60px] border-b border-white flex items-center uppercase w-full" onClick={() => setHeaderMobileVisible(false)}>
+                    <a href="#about" className="text-center font-bold hover:underline w-full">sobre mí</a>
                 </li>
-                <li className="h-[55px] border-b border-white flex items-center uppercase w-full" onClick={() => setHeaderMobileVisible(false)}>
-                    <a href="#projects" className="text-center hover:underline w-full">proyectos</a>
+                <li className="h-[60px] border-b border-white flex items-center uppercase w-full" onClick={() => setHeaderMobileVisible(false)}>
+                    <a href="#projects" className="text-center font-bold hover:underline w-full">proyectos</a>
                 </li>
-                <li className="h-[55px] border-b border-white flex items-center uppercase w-full" onClick={() => setHeaderMobileVisible(false)}>
-                    <a href="#contact" className="text-center hover:underline w-full">contacto</a>
+                <li className="h-[60px] border-b border-white flex items-center uppercase w-full" onClick={() => setHeaderMobileVisible(false)}>
+                    <a href="#contact" className="text-center font-bold hover:underline w-full">contacto</a>
                 </li>
             </ul>
         </div>
