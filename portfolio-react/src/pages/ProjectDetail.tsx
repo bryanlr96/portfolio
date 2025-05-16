@@ -5,7 +5,6 @@ import HeaderDetail from "../components/HeaderDetail"
 import Footer from "../components/Footer"
 import { urlFor } from "../utils/sanityClient"
 import { FaGithub } from 'react-icons/fa'
-import { HiOutlineCursorClick } from 'react-icons/hi'
 
 
 export default function ProjectDetail() {
@@ -23,7 +22,9 @@ export default function ProjectDetail() {
                 <section className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 text-white gap-10">
                     <div className=" w-full flex flex-col">
                         <div className="w-full relative">
-                            <a  href={project.link}className="absolute bottom-5 right-5  bg-blue-500 text-white text-2xl rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition h-12 w-12 flex items-center justify-center"><HiOutlineCursorClick className="text-2xl"/></a>
+                            <a  href={project.link}className="absolute bottom-5 right-5  bg-blue-500 text-white text-2xl rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition h-12 w-12 flex items-center justify-center">
+                                <img src="./click.png" alt="icono" width={30}/>
+                            </a>
                             <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
                         </div>
                         <h2 className="my-5">Tecnologias utilizadas:</h2>
