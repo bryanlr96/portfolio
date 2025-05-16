@@ -35,7 +35,7 @@ export default function ProjectDetail() {
                         </div>
                     </div>
                     <div className="w-full flex flex-col">
-                        <div className="w-full my-10 gap-5 flex flex-col">
+                        <div className="w-full my-5 gap-5 flex flex-col text-white">
                             {/* <p>{project.description}</p> */}
                             <div>
                                 {project.description.split('\n').map((line, idx) =>
@@ -48,10 +48,7 @@ export default function ProjectDetail() {
                                     <FaGithub className="mx-2" />
                                     GitHub
                                 </a>
-                                <a href={project.link} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
-                                    <FaLink className="mx-2" />
-                                    Projecto
-                                </a>
+                                
                             </div>
                         </div>
                     </div>
@@ -62,3 +59,9 @@ export default function ProjectDetail() {
         </>
     )
 }
+
+
+// <a href={project.link} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
+//                                     <FaLink className="mx-2" />
+//                                     Projecto
+//                                 </a>
