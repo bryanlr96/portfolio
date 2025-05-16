@@ -22,7 +22,7 @@ export default function ProjectDetail() {
                 <section className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 text-white gap-10">
                     <div className=" w-full flex flex-col">
                         <div className="w-full relative z-0">
-                            <a  href={project.link}className="absolute bottom-5 right-5 bg-amber-400 text-white text-2xl rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition h-12 w-12 flex items-center justify-center">
+                            <a  href={project.link}className="absolute bottom-5 right-5 bg-orange-400 text-white text-2xl rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition h-12 w-12 flex items-center justify-center">
                                 <img src="./tap.png" alt="icono" width={25}/>
                             </a>
                             <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
