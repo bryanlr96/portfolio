@@ -16,14 +16,14 @@ export default function ProjectDetail() {
     if (!project) return <h1>Proyecto no encontrado</h1>
     return (
         <>
-            <HeaderDetail />
+            <HeaderDetail/>
             <main className="bg-[#303841]  w-full min-h-[80vh] pb-5">
                 <h1 className="text-4xl uppercase font-bold text-center text-white py-10">{project.name}</h1>
                 <section className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 text-white gap-10">
                     <div className=" w-full flex flex-col">
-                        <div className="w-full z-0">
-                            <a  href={project.link}className="fixed z-0 bottom-5 right-5 bg-orange-400 text-white text-2xl rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition h-12 w-12 flex items-center justify-center">
-                                <img src="./tap.png" alt="icono" width={25}/>
+                        <div className="w-full">
+                            <a  href={project.link}className="fixed bottom-5 right-5 bg-orange-400 text-white text-2xl rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition h-12 w-12 flex items-center justify-center">
+                                <img src="./tap.png" alt="icono" width={25} />
                             </a>
                             <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
                         </div>
