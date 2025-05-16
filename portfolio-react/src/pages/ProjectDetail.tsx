@@ -18,10 +18,10 @@ export default function ProjectDetail() {
             <HeaderDetail />
             <main className="bg-[#303841]  w-full min-h-[80vh]">
                 <section className="w-[80%] mx-auto flex flex-col items-center text-white">
-                    <div className=" w-full flex flex-col my-10 md:my-20 items-center">
-                        <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full md:w-[60%] lg:w-[50%]" />
-                        <div className="w-full flex flex-wrap gap-3 justify-center sm:justify-start">
+                    <div className=" w-full flex flex-col my-10 md:my-20">
+                        <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full md:w-[60%] lg:w-[50%] mx-auto" />
                         <h2 className="my-5">Tecnologias utilizadas:</h2>
+                        <div className="w-full flex flex-wrap gap-3 justify-center sm:justify-start">
                             {project.technologies.map(technology => {
                                 const tech = getTechById(technologies, technology._id)
                                 return (
