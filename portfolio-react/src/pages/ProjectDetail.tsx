@@ -18,7 +18,7 @@ export default function ProjectDetail() {
             <HeaderDetail />
             <main className="bg-[#303841]  w-full min-h-[80vh] pb-5">
                 <h1 className="text-4xl uppercase font-bold text-center text-white py-10">{project.name}</h1>
-                <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center text-white gap-10">
+                <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 text-white gap-10">
                     <div className=" w-full flex flex-col">
                         <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
                         <h2 className="my-5">Tecnologias utilizadas:</h2>
