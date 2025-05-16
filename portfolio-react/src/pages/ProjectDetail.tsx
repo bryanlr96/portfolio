@@ -19,7 +19,7 @@ export default function ProjectDetail() {
             <main className="bg-[#303841]  w-full min-h-[80vh]">
                 <section className="w-[80%] mx-auto flex flex-col items-center text-white">
                     <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%]  my-20" />
-                    <h1 className="text-4xl uppercase underline">{project.name}</h1>
+                    <h1 className="text-4xl uppercase font-bold">{project.name}</h1>
                     <div className="w-full sm:w-[90%] md:w-[80%] lg:w-1/2 my-10 gap-5 flex flex-col">
                         {/* <p>{project.description}</p> */}
                         <div>
