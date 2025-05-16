@@ -44,7 +44,7 @@ export default function ProjectDetail() {
                             </div>
                             <h2>Ver Github del proyecto:</h2>
                             <div className="w-full flex flex-col sm:flex-row gap-3">
-                                <a href={project.github} className="py-2 w-ful bg-white text-black border-2 border-black font-bold flex items-center justify-center">
+                                <a href={project.github} className="py-2 w-full bg-white text-black border-2 border-black font-bold flex items-center justify-center">
                                     <FaGithub className="mx-2" />
                                     GitHub
                                 </a>
