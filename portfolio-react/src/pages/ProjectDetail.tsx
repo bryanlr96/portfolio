@@ -4,7 +4,7 @@ import { getProjectBySlug, getTechById } from "../utils/sanityData"
 import HeaderDetail from "../components/HeaderDetail"
 import Footer from "../components/Footer"
 import { urlFor } from "../utils/sanityClient"
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaLink } from 'react-icons/fa'
 
 
 export default function ProjectDetail() {
@@ -16,17 +16,12 @@ export default function ProjectDetail() {
     if (!project) return <h1>Proyecto no encontrado</h1>
     return (
         <>
-            <HeaderDetail/>
+            <HeaderDetail />
             <main className="bg-[#303841]  w-full min-h-[80vh] pb-5">
                 <h1 className="text-4xl uppercase font-bold text-center text-white py-10">{project.name}</h1>
                 <section className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 text-white gap-10">
                     <div className=" w-full flex flex-col">
-                        <div className="w-full">
-                            <a  href={project.link}className="fixed bottom-5 right-5 bg-orange-400 text-white text-2xl rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition h-12 w-12 flex items-center justify-center">
-                                <img src="./tap.png" alt="icono" width={25} />
-                            </a>
-                            <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
-                        </div>
+                        <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
                         <h2 className="my-5">Tecnologias utilizadas:</h2>
                         <div className="w-full flex flex-wrap gap-3 justify-center sm:justify-start">
                             {project.technologies.map(technology => {
@@ -48,14 +43,17 @@ export default function ProjectDetail() {
                                     line.trim() && <p key={idx} className="mb-4">{line}</p>
                                 )}
                             </div>
-                            <h2>Ver Github del proyecto:</h2>
                             <div className="w-full flex flex-col sm:flex-row gap-3">
                                 <a href={project.github} className="py-2 w-full bg-white text-black border-2 border-black font-bold flex items-center justify-center">
                                     <FaGithub className="mx-2" />
                                     GitHub
                                 </a>
-
+                                <a href={project.link} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
+                                    <FaLink className="mx-2" />
+                                    Projecto
+                                </a>
                             </div>
+
                         </div>
                     </div>
 
@@ -67,7 +65,3 @@ export default function ProjectDetail() {
 }
 
 
-// <a href={project.link} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
-//                                     <FaLink className="mx-2" />
-//                                     Projecto
-//                                 </a>
