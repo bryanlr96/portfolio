@@ -35,7 +35,7 @@ export default function ProjectDetail() {
                         </div>
                     </div>
                     <div className="w-full flex flex-col">
-                        <div className="w-full my-5 gap-5 flex flex-col text-white">
+                        <div className="w-full gap-5 flex flex-col text-white">
                             {/* <p>{project.description}</p> */}
                             <div>
                                 {project.description.split('\n').map((line, idx) =>
