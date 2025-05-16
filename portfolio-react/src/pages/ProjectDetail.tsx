@@ -27,7 +27,7 @@ export default function ProjectDetail() {
                             {project.technologies.map(technology => {
                                 const tech = getTechById(technologies, technology._id)
                                 return (
-                                    <div key={technology._id} className=" flex gap-2 items-center justify-center bg-white py-1 px-4 rounded-full text-justify">
+                                    <div key={technology._id} className=" flex gap-2 items-center justify-center bg-white py-1 px-4 rounded-full">
                                         <img src={urlFor(tech?.icon).url()} alt="icono" width={25} />
                                         <p className="text-xl text-black">{tech?.title}</p>
                                     </div>
@@ -40,7 +40,7 @@ export default function ProjectDetail() {
                             {/* <p>{project.description}</p> */}
                             <div>
                                 {project.description.split('\n').map((line, idx) =>
-                                    line.trim() && <p key={idx} className="mb-4">{line}</p>
+                                    line.trim() && <p key={idx} className="mb-4 text-justify">{line}</p>
                                 )}
                             </div>
                             <div className="w-full flex flex-col sm:flex-row gap-3">
