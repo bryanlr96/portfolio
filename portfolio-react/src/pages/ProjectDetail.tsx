@@ -46,11 +46,11 @@ export default function ProjectDetail() {
                             <div className="w-full flex flex-col sm:flex-row gap-3">
                                 <a href={project.github} className="py-2 w-full bg-white text-black border-2 border-black font-bold flex items-center justify-center">
                                     <FaGithub className="mx-2" />
-                                    GitHub
+                                    Ver GitHub
                                 </a>
                                 <a href={project.link} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
                                     <FaLink className="mx-2" />
-                                    Projecto
+                                    Ver Projecto
                                 </a>
                             </div>
 
