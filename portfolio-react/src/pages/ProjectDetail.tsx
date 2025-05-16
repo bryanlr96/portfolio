@@ -44,11 +44,11 @@ export default function ProjectDetail() {
                                 )}
                             </div>
                             <div className="w-full flex flex-col sm:flex-row gap-3">
-                                <a href={project.github} className="py-2 w-full bg-white text-black border-2 border-black font-bold flex items-center justify-center rounded-[5px]">
+                                <a href={project.github} className="py-2 w-full bg-white text-black border-2 border-black font-bold flex items-center justify-center rounded-[15px]">
                                     <FaGithub className="mx-2" />
                                     Ver GitHub
                                 </a>
-                                <a href={project.link} className="py-2 w-full bg-white text-black border-2 border-black font-bold flex items-center justify-center rounded-[5px]">
+                                <a href={project.link} className="py-2 w-full bg-white text-black border-2 border-black font-bold flex items-center justify-center rounded-[15px]">
                                     <FaLink className="mx-2" />
                                     Ver Projecto
                                 </a>
