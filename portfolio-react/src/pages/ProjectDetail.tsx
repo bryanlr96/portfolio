@@ -33,26 +33,29 @@ export default function ProjectDetail() {
                             })}
                         </div>
                     </div>
-                    <h1 className="text-4xl uppercase font-bold">{project.name}</h1>
-                    <div className="w-full sm:w-[90%] md:w-[80%] lg:w-1/2 my-10 gap-5 flex flex-col">
-                        {/* <p>{project.description}</p> */}
-                        <div>
-                            {project.description.split('\n').map((line, idx) =>
-                                line.trim() && <p key={idx} className="mb-4">{line}</p>
-                            )}
-                        </div>
-                        <h2>Enlaces de interes:</h2>
-                        <div className="w-full flex flex-col sm:flex-row gap-3">
-                            <a href={project.github} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
-                                <FaGithub className="mx-2" />
-                                GitHub
-                            </a>
-                            <a href={project.link} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
-                                <FaLink className="mx-2" />
-                                Projecto
-                            </a>
+                    <div className="w-full flex flex-col">
+                        <h1 className="text-4xl uppercase font-bold">{project.name}</h1>
+                        <div className="w-full sm:w-[90%] md:w-[80%] lg:w-1/2 my-10 gap-5 flex flex-col">
+                            {/* <p>{project.description}</p> */}
+                            <div>
+                                {project.description.split('\n').map((line, idx) =>
+                                    line.trim() && <p key={idx} className="mb-4">{line}</p>
+                                )}
+                            </div>
+                            <h2>Enlaces de interes:</h2>
+                            <div className="w-full flex flex-col sm:flex-row gap-3">
+                                <a href={project.github} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
+                                    <FaGithub className="mx-2" />
+                                    GitHub
+                                </a>
+                                <a href={project.link} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
+                                    <FaLink className="mx-2" />
+                                    Projecto
+                                </a>
+                            </div>
                         </div>
                     </div>
+
                 </section>
             </main>
             <Footer />
