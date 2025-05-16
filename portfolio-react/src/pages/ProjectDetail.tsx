@@ -23,7 +23,7 @@ export default function ProjectDetail() {
                     <div className=" w-full flex flex-col">
                         <div className="w-full relative">
                             <a  href={project.link}className="absolute bottom-5 right-5  bg-blue-500 text-white text-2xl rounded-full cursor-pointer shadow-lg hover:bg-blue-600 transition h-12 w-12 flex items-center justify-center">
-                                <img src="./click.png" className="bg-white" alt="icono" width={30}/>
+                                <img src="./tap.png" className="bg-white" alt="icono" width={30}/>
                             </a>
                             <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
                         </div>
