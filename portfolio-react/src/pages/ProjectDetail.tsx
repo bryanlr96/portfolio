@@ -16,7 +16,7 @@ export default function ProjectDetail() {
     return (
         <>
             <HeaderDetail />
-            <main className="bg-[#303841]  w-full min-h-[80vh]">
+            <main className="bg-[#303841]  w-full min-h-[80vh] pb-5">
                 <h1 className="text-4xl uppercase font-bold text-center text-white py-10">{project.name}</h1>
                 <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center text-white gap-10">
                     <div className=" w-full flex flex-col">
