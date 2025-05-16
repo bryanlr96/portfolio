@@ -18,8 +18,8 @@ export default function ProjectDetail() {
             <HeaderDetail />
             <main className="bg-[#303841]  w-full min-h-[80vh]">
                 <section className="w-[80%] mx-auto flex flex-col items-center text-white">
-                    <div className=" w-full flex flex-col">
-                        <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%]  my-20" />
+                    <div className=" w-full flex flex-col  my-20">
+                        <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%]" />
                         <h2>Tecnologias utilizadas:</h2>
                         <div className="w-full flex flex-wrap gap-3 justify-center sm:justify-start">
                             {project.technologies.map(technology => {
@@ -40,18 +40,6 @@ export default function ProjectDetail() {
                             {project.description.split('\n').map((line, idx) =>
                                 line.trim() && <p key={idx} className="mb-4">{line}</p>
                             )}
-                        </div>
-                        <h2>Tecnologias utilizadas:</h2>
-                        <div className="w-full flex flex-wrap gap-3 justify-center sm:justify-start">
-                            {project.technologies.map(technology => {
-                                const tech = getTechById(technologies, technology._id)
-                                return (
-                                    <div key={technology._id} className=" flex gap-2 items-center justify-center bg-white py-1 px-4 rounded-full">
-                                        <img src={urlFor(tech?.icon).url()} alt="icono" width={25} />
-                                        <p className="text-xl text-black">{tech?.title}</p>
-                                    </div>
-                                )
-                            })}
                         </div>
                         <h2>Enlaces de interes:</h2>
                         <div className="w-full flex flex-col sm:flex-row gap-3">
