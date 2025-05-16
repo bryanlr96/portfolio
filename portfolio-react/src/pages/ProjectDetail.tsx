@@ -20,7 +20,10 @@ export default function ProjectDetail() {
                 <h1 className="text-4xl uppercase font-bold text-center text-white py-10">{project.name}</h1>
                 <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 text-white gap-10">
                     <div className=" w-full flex flex-col">
-                        <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
+                        <div className="w-full flex">
+                            <button className="absolute bottom-5 right-5 p-10 bg-blue-500 text-white">+</button>
+                            <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
+                        </div>
                         <h2 className="my-5">Tecnologias utilizadas:</h2>
                         <div className="w-full flex flex-wrap gap-3 justify-center sm:justify-start">
                             {project.technologies.map(technology => {
@@ -48,7 +51,7 @@ export default function ProjectDetail() {
                                     <FaGithub className="mx-2" />
                                     GitHub
                                 </a>
-                                
+
                             </div>
                         </div>
                     </div>
