@@ -12,12 +12,12 @@ export default function ProjectDetail() {
 
     const project = getProjectBySlug(state.projects, slug || '')
     const { technologies } = state
-    if (!project) return <h1>Projecto no encontrado</h1>
+    if (!project) return <h1>Proyecto no encontrado</h1>
     return (
         <>
             <HeaderDetail />
             <main className="bg-[#303841]  w-full min-h-[80vh]">
-                <h1 className="text-4xl uppercase font-bold text-center py-10">{project.name}</h1>
+                <h1 className="text-4xl uppercase font-bold text-center text-white py-10">{project.name}</h1>
                 <section className="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 items-center text-white gap-10">
                     <div className=" w-full flex flex-col">
                         <img src={urlFor(project.image).url()} alt="imagen portada del proyecto" className="w-full" />
@@ -42,9 +42,9 @@ export default function ProjectDetail() {
                                     line.trim() && <p key={idx} className="mb-4">{line}</p>
                                 )}
                             </div>
-                            <h2>Enlaces de interes:</h2>
+                            <h2>Ver Github del proyecto:</h2>
                             <div className="w-full flex flex-col sm:flex-row gap-3">
-                                <a href={project.github} className="py-2 w-full sm:w-1/2 bg-white text-black border-2 border-black font-bold flex items-center justify-center">
+                                <a href={project.github} className="py-2 w-ful bg-white text-black border-2 border-black font-bold flex items-center justify-center">
                                     <FaGithub className="mx-2" />
                                     GitHub
                                 </a>
