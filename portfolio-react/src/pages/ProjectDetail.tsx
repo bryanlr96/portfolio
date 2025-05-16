@@ -27,7 +27,7 @@ export default function ProjectDetail() {
                             {project.technologies.map(technology => {
                                 const tech = getTechById(technologies, technology._id)
                                 return (
-                                    <div key={technology._id} className=" flex gap-2 items-center justify-center bg-white py-1 px-4 rounded-full">
+                                    <div key={technology._id} className=" flex gap-2 items-center justify-center bg-white py-1 px-4 rounded-full text-justify">
                                         <img src={urlFor(tech?.icon).url()} alt="icono" width={25} />
                                         <p className="text-xl text-black">{tech?.title}</p>
                                     </div>
